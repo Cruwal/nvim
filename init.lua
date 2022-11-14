@@ -43,7 +43,7 @@ require('packer').startup(function(use)
 end)
 
 require("conf.options")
-require("conf.maps")
+require("conf.keymaps")
 
 -- Telecope
 local builtin = require('telescope.builtin')
