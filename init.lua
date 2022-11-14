@@ -42,27 +42,7 @@ require('packer').startup(function(use)
   }
 end)
 
-vim.opt.list = true
-vim.opt.cursorline = true
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.incsearch = true
-vim.opt.smartindent = true
-vim.spell = true
-vim.spelllang = 'en'
-vim.opt.wrap = false
-
--- Keymaps
-vim.g.mapleader = ' '
-
--- save
-vim.keymap.set('n', '<leader>w', '<cmd>w<CR>')
-vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>')
-
+require("conf.options")
 require("conf.maps")
 
 -- Telecope
