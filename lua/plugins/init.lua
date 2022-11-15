@@ -38,6 +38,17 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'
 
+  use {
+    "hrsh7th/nvim-cmp",
+    requires = {
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+      "rafamadriz/friendly-snippets",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-buffer"
+    }
+  }
+
   use 'nvim-treesitter/nvim-treesitter'
   require'nvim-treesitter.configs'.setup {
     ensure_installed = { "c", "lua", "rust", "ruby", "javascript", "typescript", "go", "json" },
