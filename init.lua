@@ -1,5 +1,6 @@
 require("conf.options")
 require("conf.keymaps")
+require("conf.colorscheme")
 require("plugins")
 
 -- Telecope

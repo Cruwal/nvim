@@ -36,9 +36,7 @@ packer.init {
 
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-
   use 'folke/tokyonight.nvim'
-  vim.cmd [[colorscheme tokyonight]]
 
   use 'nvim-treesitter/nvim-treesitter'
   require'nvim-treesitter.configs'.setup {
