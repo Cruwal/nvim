@@ -1,49 +1,6 @@
-vim.cmd [[packadd packer.nvim]]
-
-require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-
-  use 'folke/tokyonight.nvim'
-  vim.cmd [[colorscheme tokyonight]]
-
-  use 'nvim-treesitter/nvim-treesitter'
-  require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "c", "lua", "rust", "ruby", "javascript", "typescript", "go", "json" },
-    highlight = {
-      enable = true,
-    }
-  }
-
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-  require('lualine').setup {
-    options = {
-      icons_enabled = true,
-      theme = 'tokyonight',
-    }
-  }
-
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = {
-      {'nvim-lua/plenary.nvim'},
-      {'BurntSushi/ripgrep'},
-      {'nvim-telescope/telescope-fzf-native.nvim'}
-    }
-  }
-  require('telescope').setup{
-    pickers = {
-      find_files = {
-        theme = "dropdown",
-      }
-    }
-  }
-end)
-
 require("conf.options")
 require("conf.keymaps")
+require("plugins")
 
 -- Telecope
 local builtin = require('telescope.builtin')
