@@ -37,6 +37,12 @@ packer.init {
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
 
   use {
     "hrsh7th/nvim-cmp",
