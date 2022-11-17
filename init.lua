@@ -3,6 +3,7 @@ require("conf.keymaps")
 require("conf.colorscheme")
 require("plugins")
 require("conf.cmp")
+require("conf.lsp")
 
 -- Telecope
 local builtin = require('telescope.builtin')
