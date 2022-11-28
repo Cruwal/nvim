@@ -46,6 +46,13 @@ return packer.startup(function(use)
 
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    tag = 'nightly'
+  }
 
   use {
     "hrsh7th/nvim-cmp",
