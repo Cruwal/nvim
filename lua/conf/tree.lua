@@ -23,9 +23,5 @@ tree.setup({
     enable = false,
     show_on_dirs = false,
     debounce_delay = 50,
-    severity = {
-      min = vim.diagnostic.severity.HINT,
-      max = vim.diagnostic.severity.ERROR
-    },
   }
 })
