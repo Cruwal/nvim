@@ -1,6 +1,7 @@
 --------- Normal ----------
 vim.keymap.set('n', '<leader>w', '<cmd>w<CR>')
 vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>')
+vim.keymap.set('n', '<leader>c', '<cmd>bd<CR>')
 
 -- Better window navigation
 vim.keymap.set('n', '<C-h>', '<C-w>h')
