@@ -25,3 +25,5 @@ tree.setup({
     debounce_delay = 50,
   }
 })
+
+vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>', {})

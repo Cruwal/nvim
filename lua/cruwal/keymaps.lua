@@ -1,7 +1,12 @@
+vim.g.mapleader = " "
+
 --------- Normal ----------
 vim.keymap.set('n', '<leader>w', '<cmd>w<CR>')
-vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>')
 vim.keymap.set('n', '<leader>c', '<cmd>bd<CR>')
+
+--------- Visual ----------
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '>-2<CR>gv=gv")
 
 -- Better window navigation
 vim.keymap.set('n', '<C-h>', '<C-w>h')
@@ -9,7 +14,11 @@ vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
--- vim.keymap.set('n', '<leader>e', ':Lex 30<CR>')
+-- Better copy-paste
+vim.keymap.set("x", "<leader>p", "\"_dP")
+
+-- Change all occurrences of the word
+vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Resie with arrows
 vim.keymap.set('n', '<C-Up>', ':resize +2<CR>')
@@ -27,4 +36,3 @@ vim.keymap.set('n', '<leader>tl', require("custom.rspec").run_current_test)
 
 vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
 
---------- Visual ----------
