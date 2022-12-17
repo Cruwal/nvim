@@ -3,7 +3,7 @@ local function run_test_file()
 end
 
 local function run_current_test()
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  local line, _ = unpack(vim.api.nvim_win_get_cursor(0))
 
   return vim.cmd("! rspec %:" .. line)
 end

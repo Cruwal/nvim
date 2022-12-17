@@ -19,7 +19,7 @@ lsp.configure('sumneko_lua', {
   }
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
   vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, bufopts)

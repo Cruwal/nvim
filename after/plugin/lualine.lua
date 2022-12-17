@@ -1,9 +1,8 @@
 local lualine = require('lualine')
 
 lualine.setup({
-	options = {
-		icons_enabled = true,
-		theme = 'tokyonight',
-	}
+  options = {
+    icons_enabled = true,
+    theme = 'tokyonight',
+  }
 })
-
