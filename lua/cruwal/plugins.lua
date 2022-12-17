@@ -13,11 +13,11 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Autocommand that reload neovim whenever you save the this file
+-- Autocommand that reload neovim whenever you save this file
 vim.cmd [[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost init.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]]
 
