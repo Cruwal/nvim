@@ -29,5 +29,9 @@ vim.keymap.set('n', '<leader>tl', require("custom.rspec").run_current_test)
 
 vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
 
+-------- Visual -------------
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+
 -- Preserve the copied string when paste
 vim.keymap.set("x", "<leader>p", [["_dP]])
