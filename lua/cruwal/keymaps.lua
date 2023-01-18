@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 --------- Normal ----------
 vim.keymap.set('n', '<leader>w', '<cmd>w<CR>')
 vim.keymap.set('n', '<leader>c', '<cmd>bd<CR>')
+vim.keymap.set('n', '<leader>C', '<cmd>%bd|e#<CR>')
 
 -- Better window navigation
 vim.keymap.set('n', '<C-h>', '<C-w>h')
