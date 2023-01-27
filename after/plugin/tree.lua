@@ -17,12 +17,15 @@ tree.setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
   },
   diagnostics = {
     enable = false,
     show_on_dirs = false,
     debounce_delay = 50,
+  },
+  git = {
+    ignore = false,
   }
 })
 
