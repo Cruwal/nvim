@@ -37,3 +37,16 @@ vim.keymap.set('v', '>', '>gv')
 
 -- Preserve the copied string when paste
 vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- Fugitive ---
+vim.keymap.set('n', "<leader>gc", '<cmd>Git commit<CR>')
+vim.keymap.set('n', "<leader>gca", '<cmd>Git commit --amend --no-edit<CR>')
+vim.keymap.set('n', "<leader>gp", '<cmd>Git push<CR>')
+vim.keymap.set('n', "<leader>gpf", '<cmd>Git push -f<CR>')
+vim.keymap.set('n', "<leader>gri", '<cmd>Git rebase -i HEAD~15<CR>')
+vim.keymap.set('n', "<leader>gl", "<cmd>Git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit<CR>")
+-- Fugitive - Conflicts ---
+vim.keymap.set('n', "<leader>gs", '<cmd>Gvdiffsplit!<CR>')
+vim.keymap.set('n', "<leader>gh", '<cmd>diffget //2<CR>')
+vim.keymap.set('n', "<leader>gl", '<cmd>diffget //3<CR>')
+
