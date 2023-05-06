@@ -90,6 +90,7 @@ return packer.startup(function(use)
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   use "tpope/vim-fugitive"
+  use 'ThePrimeagen/harpoon'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
