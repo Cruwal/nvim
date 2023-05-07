@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 
 --------- Normal ----------
 vim.keymap.set('n', '<leader>w', '<cmd>w<CR>')
-vim.keymap.set('n', '<leader>c', '<cmd>bd<CR>')
-vim.keymap.set('n', '<leader>C', '<cmd>%bd|e#<CR>')
+vim.keymap.set('n', '<leader>q', '<cmd>bd<CR>')
+vim.keymap.set('n', '<leader>Q', '<cmd>%bd|e#<CR>')
 
 -- Better window navigation
 vim.keymap.set('n', '<C-h>', '<C-w>h')
@@ -29,8 +29,6 @@ vim.keymap.set('n', '<leader>t', require("custom.rspec").run_test_file)
 vim.keymap.set('n', '<leader>tl', require("custom.rspec").run_current_test)
 vim.keymap.set('n', '<leader>gt', require("custom.rspec").go_to_test_file)
 
-vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
-
 -------- Visual -------------
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
@@ -39,15 +37,15 @@ vim.keymap.set('v', '>', '>gv')
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Fugitive ---
-vim.keymap.set('n', "<leader>gc", '<cmd>Git commit<CR>')
-vim.keymap.set('n', "<leader>gca", '<cmd>Git commit --amend --no-edit<CR>')
+vim.keymap.set('n', "<leader>cc", '<cmd>Git commit<CR>')
+vim.keymap.set('n', "<leader>ca", '<cmd>Git commit --amend --no-edit<CR>')
 vim.keymap.set('n', "<leader>gf", '<cmd>Git fetch<CR>')
-vim.keymap.set('n', "<leader>gpo", '<cmd>Git push<CR>')
-vim.keymap.set('n', "<leader>gpf", '<cmd>Git push -f<CR>')
-vim.keymap.set('n', "<leader>gri", '<cmd>Git rebase -i HEAD~15<CR>')
-vim.keymap.set('n', "<leader>gl", "<cmd>Git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit<CR>")
+vim.keymap.set('n', "<leader>pp", '<cmd>Git push<CR>')
+vim.keymap.set('n', "<leader>pf", '<cmd>Git push -f<CR>')
+vim.keymap.set('n', "<leader>rb", '<cmd>Git rebase -i HEAD~15<CR>')
+vim.keymap.set('n', "<leader>gl",
+  "<cmd>Git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit<CR>")
 -- Fugitive - Conflicts ---
-vim.keymap.set('n', "<leader>gs", '<cmd>Gvdiffsplit!<CR>')
-vim.keymap.set('n', "<leader>gsh", '<cmd>diffget //2<CR>')
-vim.keymap.set('n', "<leader>gsl;", '<cmd>diffget //3<CR>')
-
+vim.keymap.set('n', "<leader>gc", '<cmd>Gvdiffsplit!<CR>')
+vim.keymap.set('n', "<leader>gch", '<cmd>diffget //2<CR>')
+vim.keymap.set('n', "<leader>gcl", '<cmd>diffget //3<CR>')
