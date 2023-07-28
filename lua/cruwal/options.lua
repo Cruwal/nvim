@@ -23,4 +23,6 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.colorcolumn = "80"
 
+vim.opt.splitright = true
+
 vim.g.mapleader = " "
