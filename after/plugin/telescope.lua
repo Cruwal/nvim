@@ -1,5 +1,6 @@
 local status_ok, builtin = pcall(require, 'telescope.builtin')
 if not status_ok then
+  vim.notify("Telescope not found!")
   return
 end
 

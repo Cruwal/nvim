@@ -1,5 +1,21 @@
-require 'nvim-treesitter.configs'.setup {
-  ensure_installed = { "help", "c", "lua", "rust", "ruby", "javascript", "typescript", "go", "json" },
+local status_ok, treesitter = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+  vim.notify("treesitter not found!")
+  return
+end
+
+treesitter.setup {
+  ensure_installed = { 
+    "c",
+    "lua",
+    "rust",
+    "ruby",
+    "javascript",
+    "typescript",
+    "go",
+    "json",
+    "yaml"
+  },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
