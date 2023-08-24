@@ -53,3 +53,6 @@ vim.keymap.set('n', "<leader>gl",
 vim.keymap.set('n', "<leader>gc", '<cmd>Gvdiffsplit!<CR>')
 vim.keymap.set('n', "<leader>gch", '<cmd>diffget //2<CR>')
 vim.keymap.set('n', "<leader>gcl", '<cmd>diffget //3<CR>')
+
+-------- Terminsl -------------
+vim.keymap.set('n', "<leader>tt", '<cmd>vsplit | terminal<CR>')
