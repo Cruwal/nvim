@@ -26,52 +26,14 @@ if not status_ok then
   return
 end
 
-packer.init {
-  display = {
-    open_fn = function()
-      return require("packer.util").float({ border = "rounded" })
-    end,
-  },
-}
-
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'
-
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = {
-      { 'nvim-lua/plenary.nvim' },
-      { 'BurntSushi/ripgrep' },
-      { 'nvim-telescope/telescope-fzf-native.nvim' }
-    }
-  }
-
-  use({ 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" })
-
-  use {
-    'VonHeikemen/lsp-zero.nvim',
-    requires = {
-      -- LSP Support
-      { 'neovim/nvim-lspconfig' },
-      { 'williamboman/mason.nvim' },
-      { 'williamboman/mason-lspconfig.nvim' },
-
-      -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },
-      { 'hrsh7th/cmp-buffer' },
-      { 'hrsh7th/cmp-path' },
-      { 'saadparwaiz1/cmp_luasnip' },
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-nvim-lua' },
-
-      -- Snippets
-      { 'L3MON4D3/LuaSnip' },
-      { 'rafamadriz/friendly-snippets' },
-    }
-  }
-
+  use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
   use { 'lewis6991/gitsigns.nvim' }
+  use { 'numToStr/Comment.nvim' }
+  use 'tpope/vim-fugitive'
+  use 'ThePrimeagen/harpoon'
 
   use {
     'nvim-tree/nvim-tree.lua',
@@ -81,11 +43,22 @@ return packer.startup(function(use)
     tag = 'nightly'
   }
 
-  use "numToStr/Comment.nvim"
-  use "JoosepAlviste/nvim-ts-context-commentstring"
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.2',
+    requires = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'BurntSushi/ripgrep' },
+      { 'nvim-telescope/telescope-fzf-native.nvim' }
+    }
+  }
 
-  use "tpope/vim-fugitive"
-  use 'ThePrimeagen/harpoon'
+  use { 'neovim/nvim-lspconfig' }
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/cmp-cmdline' }
+  use { 'L3MON4D3/LuaSnip' }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
