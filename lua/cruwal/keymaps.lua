@@ -47,6 +47,7 @@ vim.keymap.set('n', "<leader>gf", '<cmd>Git fetch<CR>')
 vim.keymap.set('n', "<leader>pp", '<cmd>Git push<CR>')
 vim.keymap.set('n', "<leader>pf", '<cmd>Git push -f<CR>')
 vim.keymap.set('n', "<leader>rb", '<cmd>Git rebase -i HEAD~15<CR>')
+vim.keymap.set('n', '<leader>rbm', '<cmd>Git rebase origin/main<CR>')
 vim.keymap.set('n', "<leader>gl",
   "<cmd>Git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit<CR>")
 -- Fugitive - Conflicts ---
