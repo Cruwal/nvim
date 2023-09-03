@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 treesitter.setup {
-  ensure_installed = { 
+  ensure_installed = {
     "c",
     "lua",
     "rust",

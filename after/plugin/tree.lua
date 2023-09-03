@@ -21,8 +21,8 @@ tree.setup({
     dotfiles = false,
   },
   diagnostics = {
-    enable = false,
-    show_on_dirs = false,
+    enable = true,
+    show_on_dirs = true,
     debounce_delay = 50,
   },
   git = {
