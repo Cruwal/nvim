@@ -58,7 +58,12 @@ return packer.startup(function(use)
   use { 'hrsh7th/cmp-buffer' }
   use { 'hrsh7th/cmp-path' }
   use { 'hrsh7th/cmp-cmdline' }
-  use { 'L3MON4D3/LuaSnip' }
+  use { 'L3MON4D3/LuaSnip',
+    requires = {
+      "saadparwaiz1/cmp_luasnip",
+      "rafamadriz/friendly-snippets",
+    },
+  }
   use { 'zbirenbaum/copilot.lua' }
 
   if PACKER_BOOTSTRAP then

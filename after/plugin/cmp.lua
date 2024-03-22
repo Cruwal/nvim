@@ -10,9 +10,15 @@ if not status_ok then
   return
 end
 
+local status_ok, snip_vscode = pcall(require, "luasnip.loaders.from_vscode")
+if not status_ok then
+  vim.notify("luasnip.loaders.from_vscode not found!")
+  return
+end
+snip_vscode.lazy_load()
+
 cmp.setup({
   snippet = {
-    -- REQUIRED - you must specify a snippet engine
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
     end,
@@ -28,6 +34,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For luasnip users.
+  }, {
     { name = 'buffer' },
     { name = 'path' }, -- relative files
   })
