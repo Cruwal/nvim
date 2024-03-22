@@ -23,7 +23,7 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.showtabline = 2
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
 
 vim.opt.splitright = true
 
