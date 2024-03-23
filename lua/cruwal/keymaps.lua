@@ -1,3 +1,9 @@
+local status_ok, rspec = pcall(require, "custom.rspec")
+if not status_ok then
+  vim.notify("Custom RSpec not found!")
+  return
+end
+
 vim.g.mapleader = " "
 
 --------- Normal ----------
@@ -29,9 +35,10 @@ vim.keymap.set('n', '<S-l>', ':bnext<CR>')
 vim.keymap.set('n', '<S-h>', ':bprevious<CR>')
 
 -- RSpec
-vim.keymap.set('n', '<leader>ta', require("custom.rspec").run_test_file)
-vim.keymap.set('n', '<leader>tl', require("custom.rspec").run_current_test)
-vim.keymap.set('n', '<leader>gt', require("custom.rspec").go_to_test_file)
+vim.keymap.set('n', '<leader>ta', rspec.run_test_file)
+vim.keymap.set('n', '<leader>tl', rspec.run_current_test)
+vim.keymap.set('n', '<leader>td', rspec.debug_current_test)
+vim.keymap.set('n', '<leader>gt', rspec.go_to_test_file)
 
 -------- Visual -------------
 vim.keymap.set('v', '<', '<gv')
