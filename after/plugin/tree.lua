@@ -4,16 +4,26 @@ if not status_ok then
   return
 end
 
+local function custom_methods(bufnr)
+  local api = require "nvim-tree.api"
+
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  local function change_workign_directory()
+    node = api.tree.get_node_under_cursor()
+
+    api.tree.change_root_to_node(node)
+    vim.cmd("cd " .. node.absolute_path)
+  end
+
+  vim.keymap.set('n', '<C-]>', change_workign_directory, opts('Change Working Directory'))
+end
+
 tree.setup({
+  on_attach = custom_methods,
   sort_by = "case_sensitive",
-  view = {
-    adaptive_size = true,
-    mappings = {
-      list = {
-        { key = "u", action = "dir_up" },
-      },
-    },
-  },
   renderer = {
     group_empty = true,
   },
