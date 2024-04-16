@@ -6,17 +6,15 @@ local function get_test_file()
 
   local filename = vim.fn.expand('%:t')
   local file_head = vim.fn.expand('%:h')
-  local formatted_extension
-  local formatted_head
 
   local test_file
   if not filename.match(filename, "_spec.rb") then
-    formatted_extension = filename.gsub(filename, ".rb", "_spec.rb")
-    formatted_head = file_head.gsub(file_head, "app", "spec")
+    local formatted_extension = filename.gsub(filename, ".rb", "_spec.rb")
+    local formatted_head = file_head.gsub(file_head, "app", "spec")
 
     test_file = formatted_head .. "/" .. formatted_extension
   else
-    test_file = "%"
+    test_file = file_head .. "/" .. filename
   end
 
   return test_file
