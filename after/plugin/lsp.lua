@@ -27,6 +27,9 @@ lsp.rust_analyzer.setup {
 lsp.lua_ls.setup {
   capabilities = capabilities
 }
+lsp.ruby_ls.setup {
+  capabilities = capabilities
+}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
