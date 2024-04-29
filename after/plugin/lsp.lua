@@ -27,7 +27,7 @@ lsp.rust_analyzer.setup {
 lsp.lua_ls.setup {
   capabilities = capabilities
 }
-lsp.ruby_ls.setup {
+lsp.ruby_lsp.setup {
   capabilities = capabilities
 }
 
