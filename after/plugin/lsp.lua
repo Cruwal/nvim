@@ -4,8 +4,8 @@ if not status_ok then
   return
 end
 
-local status_ok, cmp_nvim = pcall(require, "cmp_nvim_lsp")
-if not status_ok then
+local cmp_status_ok, cmp_nvim = pcall(require, "cmp_nvim_lsp")
+if not cmp_status_ok then
   vim.notify("cmp_nvim_lsp not found!")
   return
 end

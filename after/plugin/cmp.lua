@@ -4,14 +4,14 @@ if not status_ok then
   return
 end
 
-local status_ok, luasnip = pcall(require, "luasnip")
-if not status_ok then
+local lua_status_ok, luasnip = pcall(require, "luasnip")
+if not lua_status_ok then
   vim.notify("luasnip not found!")
   return
 end
 
-local status_ok, snip_vscode = pcall(require, "luasnip.loaders.from_vscode")
-if not status_ok then
+local snip_status_ok, snip_vscode = pcall(require, "luasnip.loaders.from_vscode")
+if not snip_status_ok then
   vim.notify("luasnip.loaders.from_vscode not found!")
   return
 end

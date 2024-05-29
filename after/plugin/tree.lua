@@ -11,14 +11,14 @@ local function custom_methods(bufnr)
     return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
 
-  local function change_workign_directory()
-    node = api.tree.get_node_under_cursor()
+  local function change_working_directory()
+    local node = api.tree.get_node_under_cursor()
 
     api.tree.change_root_to_node(node)
     vim.cmd("cd " .. node.absolute_path)
   end
 
-  vim.keymap.set('n', '<C-]>', change_workign_directory, opts('Change Working Directory'))
+  vim.keymap.set('n', '<C-]>', change_working_directory, opts('Change Working Directory'))
 end
 
 tree.setup({
