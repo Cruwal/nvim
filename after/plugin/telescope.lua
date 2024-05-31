@@ -9,6 +9,7 @@ vim.keymap.set('n', '<leader>sf', builtin.git_files, {})
 vim.keymap.set('n', '<leader>sw', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>sr', builtin.oldfiles, {})
 vim.keymap.set('n', '<leader>ss', builtin.grep_string, {})
+vim.keymap.set('n', '<leader>sb', builtin.buffers, {})
 
 vim.keymap.set('n', 'gr', builtin.lsp_references, {})
 vim.keymap.set('n', 'gi', builtin.lsp_implementations, {})
