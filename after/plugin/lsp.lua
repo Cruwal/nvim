@@ -18,7 +18,7 @@ lsp.solargraph.setup {
 lsp.rubocop.setup {
   capabilities = capabilities
 }
-lsp.tsserver.setup {
+lsp.ts_ls.setup {
   capabilities = capabilities
 }
 lsp.rust_analyzer.setup {
