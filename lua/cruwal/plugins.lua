@@ -40,7 +40,6 @@ return packer.startup(function(use)
     requires = {
       'nvim-tree/nvim-web-devicons',
     },
-    tag = 'nightly'
   }
 
   use {
@@ -52,7 +51,6 @@ return packer.startup(function(use)
     }
   }
 
-  use { 'neovim/nvim-lspconfig' }
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'hrsh7th/cmp-buffer' }
@@ -64,8 +62,6 @@ return packer.startup(function(use)
       "rafamadriz/friendly-snippets",
     },
   }
-  use { 'zbirenbaum/copilot.lua' }
-
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
