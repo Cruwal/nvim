@@ -22,7 +22,7 @@ local function custom_methods(bufnr)
 end
 
 tree.setup({
-  on_attach = custom_methods,
+  -- on_attach = custom_methods,
   sort_by = "case_sensitive",
   renderer = {
     group_empty = true,
