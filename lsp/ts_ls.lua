@@ -1,5 +1,13 @@
 return {
+  init_options = { hostInfo = 'neovim' },
   cmd = { 'typescript-language-server', '--stdio' },
-  filetype = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx' },
-  root_markers = { 'package.json', 'tsconfig.json' }
+  filetypes = {
+    'typescript',
+    'javascript',
+    'typescript.tsx',
+    'javascript.jsx',
+    'typescriptreact',
+    'javascriptreact',
+  },
+  root_markers = { 'package-lock.json', 'yarn.lock', 'pnpm-lock.yaml', 'bun.lockb', 'bun.lock' }
 }
