@@ -21,19 +21,19 @@ local function get_test_file()
 end
 
 local function run_test_file()
-  return vim.cmd("vsplit | terminal rspec " .. get_test_file() .. " -f d")
+  return vim.cmd("vsplit | terminal bundle exec rspec " .. get_test_file() .. " -f d")
 end
 
 local function run_current_test()
   local line = vim.api.nvim_win_get_cursor(0)[1]
 
-  return vim.cmd("vsplit | terminal rspec " .. get_test_file() .. ":" .. line .. " -f d")
+  return vim.cmd("vsplit | terminal bundle exec rspec " .. get_test_file() .. ":" .. line .. " -f d")
 end
 
 local function debug_current_test()
   local line = vim.api.nvim_win_get_cursor(0)[1]
 
-  return vim.cmd("vsplit | terminal DEBUG=true rspec " .. get_test_file() .. ":" .. line .. " -f d")
+  return vim.cmd("vsplit | terminal DEBUG=true bundle exec rspec " .. get_test_file() .. ":" .. line .. " -f d")
 end
 
 local function go_to_test_file()
