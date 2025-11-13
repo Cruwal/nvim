@@ -1,35 +1,14 @@
-local status_ok, lsp = pcall(require, "lspconfig")
-if not status_ok then
-  vim.notify("LSP not found!")
-  return
-end
+vim.lsp.config('rubocop', {})
+vim.lsp.enable('rubocop')
 
-local cmp_status_ok, cmp_nvim = pcall(require, "cmp_nvim_lsp")
-if not cmp_status_ok then
-  vim.notify("cmp_nvim_lsp not found!")
-  return
-end
+vim.lsp.config('ruby_lsp', {})
+vim.lsp.enable('ruby_lsp')
 
-local capabilities = cmp_nvim.default_capabilities()
+vim.lsp.config('ts_ls', {})
+vim.lsp.enable('ts_ls')
 
-lsp.solargraph.setup {
-  capabilities = capabilities
-}
-lsp.rubocop.setup {
-  capabilities = capabilities
-}
-lsp.ts_ls.setup {
-  capabilities = capabilities
-}
-lsp.rust_analyzer.setup {
-  capabilities = capabilities
-}
-lsp.lua_ls.setup {
-  capabilities = capabilities
-}
-lsp.ruby_lsp.setup {
-  capabilities = capabilities
-}
+vim.lsp.config('rust_analyzer', {})
+vim.lsp.enable('rust_analyzer')
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
