@@ -29,7 +29,6 @@ end
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'
-  use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
   use { 'lewis6991/gitsigns.nvim' }
   use { 'numToStr/Comment.nvim' }
   use 'tpope/vim-fugitive'
