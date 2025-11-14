@@ -23,6 +23,7 @@ vim.opt.showtabline = 2
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.colorcolumn = "120"
+vim.opt.winborder = "rounded"
 
 vim.opt.splitright = true
 
