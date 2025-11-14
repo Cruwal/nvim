@@ -4,8 +4,6 @@ if not status_ok then
   return
 end
 
-vim.g.mapleader = " "
-
 --------- Normal ----------
 vim.keymap.set('n', '<leader>w', '<cmd>w<CR>')
 vim.keymap.set('n', '<leader>q', '<cmd>bd<CR>')
