@@ -51,10 +51,6 @@ vim.keymap.set('n', "<leader>rb", '<cmd>Git rebase -i HEAD~15<CR>')
 vim.keymap.set('n', '<leader>rbm', '<cmd>Git rebase origin/main<CR>')
 vim.keymap.set('n', "<leader>gl",
   "<cmd>Git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit<CR>")
--- Fugitive - Conflicts ---
-vim.keymap.set('n', "<leader>gc", '<cmd>Gvdiffsplit!<CR>')
-vim.keymap.set('n', "<leader>gch", '<cmd>diffget //2<CR>')
-vim.keymap.set('n', "<leader>gcl", '<cmd>diffget //3<CR>')
 
 -------- Terminal -------------
 vim.keymap.set('n', "<leader>tt", '<cmd>vsplit | terminal<CR>')
