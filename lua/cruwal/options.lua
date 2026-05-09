@@ -6,6 +6,10 @@ vim.opt.shiftwidth = 2
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.swapfile = false
+vim.opt.undofile = true
+
+vim.opt.signcolumn = 'yes'
+vim.opt.updatetime = 250
 
 vim.hlsearch = false
 vim.opt.incsearch = true
