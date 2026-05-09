@@ -46,12 +46,12 @@ local function go_to_test_file()
   local file_head = vim.fn.expand('%:h')
   local formatted_extension
   local formatted_head
-  if filename.match(filename, "_spec.rb") then
-    formatted_extension = filename.gsub(filename, "_spec.rb", ".rb")
-    formatted_head = file_head.gsub(file_head, "spec", "app")
+  if filename.match(filename, "_spec%.rb$") then
+    formatted_extension = filename.gsub(filename, "_spec%.rb$", ".rb")
+    formatted_head = file_head.gsub(file_head, "^spec/", "app/")
   else
-    formatted_extension = filename.gsub(filename, ".rb", "_spec.rb")
-    formatted_head = file_head.gsub(file_head, "app", "spec")
+    formatted_extension = filename.gsub(filename, "%.rb$", "_spec.rb")
+    formatted_head = file_head.gsub(file_head, "^app/", "spec/")
   end
 
   local command = "e " .. formatted_head .. "/" .. formatted_extension
