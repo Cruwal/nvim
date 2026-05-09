@@ -4,6 +4,10 @@ if not status_ok then
   return
 end
 
+pcall(function()
+  require('telescope').load_extension('fzf')
+end)
+
 vim.keymap.set('n', '<leader>sg', builtin.find_files, {})
 vim.keymap.set('n', '<leader>sf', builtin.git_files, {})
 vim.keymap.set('n', '<leader>sw', builtin.live_grep, {})

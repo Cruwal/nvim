@@ -11,8 +11,8 @@ vim.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 
-vim.spell = true
-vim.spelllang = 'en'
+vim.opt.spell = true
+vim.opt.spelllang = 'en'
 
 vim.opt.list = true
 vim.opt.cursorline = true

@@ -1,8 +1,16 @@
 return {
   cmd = { 'ruby-lsp' },
-  filetypes = { 'ruby', 'eruby' },
-  root_markers = { 'Gemfile' },
-  init_options = { formatter = 'auto' },
+  filetypes = { 'ruby' },
+  root_markers = { 'Gemfile', 'Rakefile' },
+  init_options = {
+    formatter = 'standard',
+    linters = { 'standard' },
+    addonSettings = {
+      ["Ruby LSP Rails"] = {
+        enablePendingMigrationsPrompt = false,
+      }
+    }
+  },
 
   reuse_client = function(client, config)
     config.cmd_cwd = config.root_dir
